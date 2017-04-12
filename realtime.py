@@ -107,8 +107,7 @@ def main():
 		try:
 			all_data=[]
 			tmp = tempfile.NamedTemporaryFile(delete=False)
-			print('tmp:', tmp, 'name:', tmp.name)
-			#print(profiles.items())
+			#print('tmp:', tmp, 'name:', tmp.name)
 			for site in sorted(profiles.items(), key=lambda item: item[1]['order']):
 				#print('site:', site)
 				all_data.append(getStats(profiles[site[0]]))
