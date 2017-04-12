@@ -109,7 +109,7 @@ def main():
 			tmp = tempfile.NamedTemporaryFile(delete=False)
 			#print('tmp:', tmp, 'name:', tmp.name)
 			for site in sorted(profiles.items(), key=lambda item: item[1]['order']):
-				#print('site:', site)
+				print('site:', site)
 				all_data.append(getStats(profiles[site[0]]))
 			tmp.write(str(json.dumps(all_data, indent=4)).encode('utf-8'))
 		except IOError as e:
